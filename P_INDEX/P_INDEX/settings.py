@@ -32,7 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     #named like this because it sounds cool
-    'codex'
+    'codex',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
