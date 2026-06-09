@@ -8,7 +8,7 @@ function count(command) {
         
         if (counter % 10 === 0){
             //pass a varible into a string
-            alert(`Count is now ${counter}`)
+            alert(`Count is now ${counter}`);
         }
     }
     //add event listener helps you make a function without name and then run it when in this case the content of the 
@@ -25,7 +25,8 @@ function count(command) {
         };
         //Reset button
         document.querySelector('#reset').onclick = function() {
-            counter = 0; document.querySelector('#number').innerHTML = counter;
-            alert(`Counter restarted to ${counter}`)
+            counter = 0;
+            document.querySelector('#number').innerHTML = counter;
+            alert(`Counter restarted to ${counter}`);
         }
     });
