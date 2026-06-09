@@ -8,12 +8,12 @@
             //make a new function
             function count() {
                 counter++;
-                alert(counter);
+                document.querySelector('h1').innerHTML = counter;
             }
         </script>
     </head>
     <body>
-        <h1>Counter</h1>
+        <h1>0</h1>
         <!-- Call the js function -->
         <button onclick="count()">Count</button>
     </body>

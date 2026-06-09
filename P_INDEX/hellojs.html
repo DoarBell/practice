@@ -5,14 +5,19 @@
         <script>
             //Create a function
             function hello() {
-                //Find a html element (queryselector) and change its inner HMTL properties to 'goodbye!'
-                document.querySelector('h1').innerHTML = 'Goodbye!';
+                //Find a html element (queryselector) and change its inner HMTL properties to 'goodbye!' back and forth
+                const heading = document.querySelector('h1');
+                if (heading.innerHTML==='Hello!') {
+                    heading.innerHTML = 'Goodbye!';                   
+                } else {
+                    heading.innerHTML = 'Hello!';
+                }
             }
 
         </script>
     </head>
     <body>
-        <h1>hello</h1>
+        <h1>Hello!</h1>
         <button onclick="hello()">click here</button>
     </body>
 </html>
