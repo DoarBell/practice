@@ -1,0 +1,24 @@
+div {
+  font-size: 18px;
+}
+div p {
+  color: red;
+}
+div ul {
+  color: 1;
+}
+
+p {
+  font-family: "Gill Sans";
+  color: steelblue;
+}
+
+ul {
+  font-size: 15px;
+  color: green;
+}
+
+ol {
+  font-size: 20px;
+  color: green;
+}/*# sourceMappingURL=variables.css.map */

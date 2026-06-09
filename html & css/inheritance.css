@@ -1,0 +1,20 @@
+.error, .warning, .sucess {
+  font-family: sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  border: 1px solid blanchedalmond;
+  margin: 20px;
+}
+
+.sucess {
+  /*inheritance whooooo*/
+  background-color: green;
+}
+
+.warning {
+  background-color: orange;
+}
+
+.error {
+  background-color: red;
+}/*# sourceMappingURL=inheritance.css.map */

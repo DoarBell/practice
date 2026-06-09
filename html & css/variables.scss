@@ -1,0 +1,27 @@
+$color: green;
+$gestalt: steelblue;
+
+div {
+    font-size: 18px;
+    p{
+        color: red;
+    }
+    ul{
+        color:alpha($color: #930dae);
+    }
+}
+
+p{
+    font-family:'Gill Sans';
+    color: $gestalt;
+}
+
+ul {
+    font-size: 15px;
+    color: $color;
+}
+
+ol {
+    font-size: 20px;
+    color: $color;
+}
