@@ -3,12 +3,16 @@
     <head>
         <title>hello</title>
         <script>
+            //Create a function
             function hello() {
-                alert('hello, world!');
+                //Find a html element (queryselector) and change its inner HMTL properties to 'goodbye!'
+                document.querySelector('h1').innerHTML = 'Goodbye!';
             }
+
         </script>
     </head>
     <body>
         <h1>hello</h1>
+        <button onclick="hello()">click here</button>
     </body>
 </html>
