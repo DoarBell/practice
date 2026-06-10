@@ -1,11 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
-
-    document.querySelectorAll('button').forEach(function(button) {
-        button.onclick=function() {
-            document.querySelector('#hello').style.color = button.dataset.color;
-            setTimeout(function() {
-                document.querySelector('#hello').style.color = 'white';
-            }, 1000)
+                                                        //function(something) {} is the same as (something) => {rest of the code}
+        document.querySelector('select').onchange = () => {
+            document.querySelector('#hello').style.color = this.value;
         }
-    })
-});
+    });
