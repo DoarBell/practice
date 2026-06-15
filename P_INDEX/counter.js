@@ -1,5 +1,6 @@
 //initiate a new variable
 let counter = 0;
+//This is not being called in the program, it is not needed, it is just and example for you baby ;)
 //make a new function
 function count(command) {
         //count button
