@@ -35,17 +35,22 @@ document.addEventListener('DOMContentLoaded', function() {
         alert(`Counter restarted to ${counter}`);
     }
     //Calculator
-    document.querySelector('#calculate').onclick = () => {
-        event.preventDefault();
-        let formula = document.querySelector('#formula').value
-        formula = formula.replace(/x/g, '')
-        if (formula.includes("x")){
-            result = () => {
+    const resultDisplay = document.querySelector('#result');
+    const formulaInput = document.querySelector('#formula');
+    const button = document.querySelectorAll('.calc');
+    button.forEach(button => {
+        button.addEventListener('click', function(){
+            if(this.textContent === '='){
+                try{
+                    const result = eval(formulaInput.value);
+                    formulaInput.value =  `${result}`;
+                } catch(error) {
+                    formulaInput.value = "Error";
+                }
             }
-            document.querySelector('#result').innerHTML = "found x somehow"
-        }
-        else {
-            document.querySelector('#result').innerHTML = formula
-        }
-    }
+            else{
+            formulaInput.value += this.textContent;
+            }
+        });
+    });
 });
