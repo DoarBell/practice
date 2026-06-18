@@ -12,22 +12,40 @@ function count(command) {
             alert(`Count is now ${counter}`);
         }
     }
+
+function calc(input){
+    input.value = input.value.replace(/[^Xx+-/0-9]/g, '');
+}
     //add event listener helps you make a function without name and then run it when in this case the content of the 
     //whole page is done loading 'DOMContentLoaded'
     //you can also just pass the name of the function like in the second line you can addEventListener pasing ('trigger', and the funtion's name)
-    document.addEventListener('DOMContentLoaded', function() {
-                                        //.addEventListener('onclick', count)
-        document.querySelector('#count').onclick = function() {
-            counter++;
-            document.querySelector('#number').innerHTML = counter;
-            if(counter % 10 === 0){
-                alert(`Count in now ${counter}`)
-            }
-        };
-        //Reset button
-        document.querySelector('#reset').onclick = function() {
-            counter = 0;
-            document.querySelector('#number').innerHTML = counter;
-            alert(`Counter restarted to ${counter}`);
+document.addEventListener('DOMContentLoaded', function() {
+                                    //.addEventListener('onclick', count)
+    document.querySelector('#count').onclick = function() {
+        counter++;
+        document.querySelector('#number').innerHTML = counter;
+        if(counter % 10 === 0){
+            alert(`Count in now ${counter}`)
         }
-    });
+    };
+    //Reset button
+    document.querySelector('#reset').onclick = function() {
+        counter = 0;
+        document.querySelector('#number').innerHTML = counter;
+        alert(`Counter restarted to ${counter}`);
+    }
+    //Calculator
+    document.querySelector('#calculate').onclick = () => {
+        event.preventDefault();
+        let formula = document.querySelector('#formula').value
+        formula = formula.replace(/x/g, '')
+        if (formula.includes("x")){
+            result = () => {
+            }
+            document.querySelector('#result').innerHTML = "found x somehow"
+        }
+        else {
+            document.querySelector('#result').innerHTML = formula
+        }
+    }
+});
