@@ -4,6 +4,7 @@
         <title>Counter</title>
         <script src="counter.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <h1 id="number">0</h1>
@@ -12,36 +13,43 @@
         <button id="reset">Reset</button>
 
         <h2 id="calculator">Calculator</h2>
-        <div class="col" style="max-width: 400px; min-width: 200px;">
-            <form id="calc" style="width: 100%;">
-                <input autofocus id="formula" oninput="calc(this)" style="width: 100%; margin-left: 20px; height: 40px; font-size: 30px;" type="text">
+        <div class="col" style="max-width: 400px; min-width: 100px;">
+            <form id="calc">
+                <input autofocus id="formula" oninput="calc(this)" style="width: 160px; margin-left: 20px; height: 40px; font-size: 20px;" type="text">
                 <div class="container-fluid" style="margin-left: 20px;">
                     <div class="row">
                         <div class="btn-group" role="group">
-                            <button id="one" type="button" class="btn btn-primary">1</button>
-                            <button id="two" type="button" class="btn btn-primary">2</button>
-                            <button id="three" type="button" class="btn btn-primary">3</button>
-                            <button id="plus" type="button" class="btn btn-primary">+</button>
+                            <button type="button" class="btn btn-primary calc">1</button>
+                            <button type="button" class="btn btn-primary calc">2</button>
+                            <button type="button" class="btn btn-primary calc">3</button>
+                            <button type="button" class="btn btn-primary calc">+</button>
                         </div>
                     </div>
                     <div class="row">
                         <div class="btn-group" role="group">
-                            <button id="four" type="button" class="btn btn-primary">4</button>
-                            <button id="five" type="button" class="btn btn-primary">5</button>
-                            <button id="six" type="button" class="btn btn-primary">6</button>
-                            <button id="plus" type="button" class="btn btn-primary">-</button>
+                            <button type="button" class="btn btn-primary calc">4</button>
+                            <button type="button" class="btn btn-primary calc">5</button>
+                            <button type="button" class="btn btn-primary calc">6</button>
+                            <button type="button" class="btn btn-primary calc">-</button>
                         </div>
                     </div>
                     <div class="row">
                         <div class="btn-group" role="group">
-                            <button id="seven" type="button" class="btn btn-primary">7</button>
-                            <button id="eight" type="button" class="btn btn-primary">8</button>
-                            <button id="nine" type="button" class="btn btn-primary">9</button>
-                            <button id="six" type="button" class="btn btn-primary">x</button>
+                            <button type="button" class="btn btn-primary calc">7</button>
+                            <button type="button" class="btn btn-primary calc">8</button>
+                            <button type="button" class="btn btn-primary calc">9</button>
+                            <button type="button" class="btn btn-primary calc">x</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-primary calc">0</button>
+                            <button type="button" class="btn btn-primary calc">.</button>
+                            <button type="button" class="btn btn-primary calc">/</button>
+                            <button id="calculate" type="button" class="btn btn-primary calc">=</button>
                         </div>
                     </div>
                 </div>
-                <button id="calculate">=</button>
             </form>
         </div>
         <h2 id="result"></h2>
