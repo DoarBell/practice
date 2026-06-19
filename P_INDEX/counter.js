@@ -35,21 +35,25 @@ document.addEventListener('DOMContentLoaded', function() {
         alert(`Counter restarted to ${counter}`);
     }
     //Calculator
-    const resultDisplay = document.querySelector('#result');
     const formulaInput = document.querySelector('#formula');
-    const button = document.querySelectorAll('.calc');
-    button.forEach(button => {
+    const buttonarray = document.querySelectorAll('.calc');
+    buttonarray.forEach(button => {
         button.addEventListener('click', function(){
             if(this.textContent === '='){
                 try{
                     const result = eval(formulaInput.value);
-                    formulaInput.value =  `${result}`;
+                    formulaInput.value =  result;
                 } catch(error) {
                     formulaInput.value = "Error";
                 }
-            }
-            else{
-            formulaInput.value += this.textContent;
+            } else if (this.textContent === 'AC') {
+                formulaInput.value = "";
+            } else {
+                if (this.textContent === "x"){
+                    formulaInput.value += "*"
+                } else {
+                    formulaInput.value += this.textContent;
+                }
             }
         });
     });
