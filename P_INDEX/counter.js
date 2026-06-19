@@ -39,6 +39,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const buttonarray = document.querySelectorAll('.calc');
     buttonarray.forEach(button => {
         button.addEventListener('click', function(){
+            if (formulaInput.value === 'Error') {
+                formulaInput.value = ""
+            }
             if(this.textContent === '='){
                 try{
                     const result = eval(formulaInput.value);
