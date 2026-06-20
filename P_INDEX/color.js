@@ -10,6 +10,5 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }); 
         document.querySelector('#submit').onclick = function() {
-            document.querySelector('#hello').style.color = document.querySelector('#color').value
-        }
+            document.querySelector('#hello').style.color = document.querySelector('#color').value }
     });
