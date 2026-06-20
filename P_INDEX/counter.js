@@ -12,9 +12,9 @@ function count(command) {
             alert(`Count is now ${counter}`);
         }
     }
-
+//this is the input normalizer for when the user wants to use the keyboard to type in the calculator
 function calc(input){
-    input.value = input.value.replace(/[^Xx+-/0-9]/g, '');
+    input.value = input.value.replace(/[^().%x+-/0-9]/g, '');
 }
     //add event listener helps you make a function without name and then run it when in this case the content of the 
     //whole page is done loading 'DOMContentLoaded'
