@@ -3,9 +3,13 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelector('select').onchange = function() {
             document.querySelector('#hello').style.color = this.value;
         };
+
         document.querySelectorAll('button').forEach((button) => {
             button.onclick = function() {
                 document.querySelector('#hello').style.color = button.dataset.color;
             }
         }); 
+        document.querySelector('#submit').onclick = function() {
+            document.querySelector('#hello').style.color = document.querySelector('#color').value
+        }
     });
