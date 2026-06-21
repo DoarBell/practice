@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
         };
         //This one makes it so all the buttons are selected, you can do this with a bunch of buttons with diferent id's
         document.querySelectorAll('button').forEach((button) => {
-            button.onclick = function() {                   // Dataset color is the one in the html file in the button data-color part
+            button.onclick = function() {                   // Dataset color is the one in the html file in the button's data-color attribute
                 document.querySelector('#hello').style.color = button.dataset.color;
             }
         }); 
