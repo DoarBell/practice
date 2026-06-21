@@ -7,10 +7,10 @@ function count(command) {
         counter++;
         document.querySelector('h1').innerHTML = counter;
         
-        if (counter % 10 === 0){
+        /* if (counter % 10 === 0){
             //pass a varible into a string
             alert(`Count is now ${counter}`);
-        }
+        } */
     }
 //this is the input normalizer for when the user wants to use the keyboard to type in the calculator
 function calc(input){
@@ -24,9 +24,9 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('#count').onclick = function() {
         counter++;
         document.querySelector('#number').innerHTML = counter;
-        if(counter % 10 === 0){
+        /* if(counter % 10 === 0){
             alert(`Count in now ${counter}`)
-        }
+        } */
     };
     //Reset button
     document.querySelector('#reset').onclick = function() {
@@ -34,6 +34,9 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelector('#number').innerHTML = counter;
         alert(`Counter restarted to ${counter}`);
     }
+
+    document.querySelector('#count').onclick = () => { setInterval(count, 1000) };
+
     //Calculator
     const formulaInput = document.querySelector('#formula');
     const buttonarray = document.querySelectorAll('.calc');
