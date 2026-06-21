@@ -3,12 +3,13 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelector('select').onchange = function() {
             document.querySelector('#hello').style.color = this.value;
         };
-
+        //This one makes it so all the buttons are selected, you can do this with a bunch of buttons with diferent id's
         document.querySelectorAll('button').forEach((button) => {
-            button.onclick = function() {
+            button.onclick = function() {                   // Dataset color is the one in the html file in the button data-color part
                 document.querySelector('#hello').style.color = button.dataset.color;
             }
         }); 
+        //You made this one, just remember that you need to use .value for inputs and so
         document.querySelector('#submit').onclick = function() {
             document.querySelector('#hello').style.color = document.querySelector('#color').value }
     });
